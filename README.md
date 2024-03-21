@@ -9,7 +9,7 @@ _Based on my [blog](https://r00ks.io) ([code here](https://github.com/Austionian
 - [Twailwind CSS](https://tailwindcss.com/)
 
 ## Template Features
-Comes with a configured Github CI, Dependabot, and server telemetry.
+Comes with a configured Github CI, Dependabot, server telemetry, and basic tests.
 
 ## Developing
 > [!IMPORTANT]
