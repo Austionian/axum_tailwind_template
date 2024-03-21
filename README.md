@@ -7,6 +7,7 @@ _Based on my [blog](https://r00ks.io) ([code here](https://github.com/Austionian
 ## Stack
 - [Axum](https://docs.rs/axum/latest/axum/)
 - [Twailwind CSS](https://tailwindcss.com/)
+- [Tera](https://keats.github.io/tera/docs/)
 
 ## Template Features
 Comes with a configured Github CI, Dependabot, server telemetry, and basic tests.
