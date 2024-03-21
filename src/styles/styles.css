@@ -1,3 +1,4 @@
+/* This file creates your base css that Tailwind will honor. */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,31 +14,9 @@
     margin-bottom: 2rem;
   }
 
-  .prose a {
-    color: theme("colors.secondary.500");
-  }
-
-  .prose a:hover {
-    color: theme("colors.secondary.600");
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .prose a {
-      color: theme("colors.secondary.400");
-    }
-
-    .prose a:hover {
-      color: theme("colors.secondary.300");
-    }
-  }
-
   @media screen and (min-width: 640px) {
     h1 {
       font-size: 3rem;
     }
-  }
-
-  h3 {
-    margin-bottom: 0.5rem;
   }
 }
