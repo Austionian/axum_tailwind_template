@@ -8,11 +8,16 @@ _Based on my [blog](https://r00ks.io) ([code here](https://github.com/Austionian
 - [Axum](https://docs.rs/axum/latest/axum/)
 - [Twailwind CSS](https://tailwindcss.com/)
 
+## Template Features
+Comes with a configured Github CI, Dependabot, and server telemetry.
+
 ## Developing
-- [Install and config](https://tailwindcss.com/blog/standalone-cli) the Tailwindcss cli.
-- Install [cargo-watch](https://crates.io/crates/cargo-watch): 
-`cargo install cargo-watch`
-- Install [just](https://github.com/casey/just#packages)
+> [!IMPORTANT]
+> You'll need to download and install the following to begin working:
+> - [Install and config](https://tailwindcss.com/blog/standalone-cli) the Tailwindcss cli.
+> - Install [cargo-watch](https://crates.io/crates/cargo-watch): 
+> `cargo install cargo-watch`
+> - Install [just](https://github.com/casey/just#packages)
 
 Included is a bash script in a `justfile` that can be run with:
 ```shell
