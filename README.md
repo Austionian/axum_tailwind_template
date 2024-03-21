@@ -2,6 +2,8 @@
 A simple template using Axum and Tailwind to speed up your Rust development. Deploy-ready with a Dockerfile
 so that you can host this anywhere you can a container.
 
+_Based on my [blog](https://r00ks.io) ([code here](https://github.com/Austionian/bl0g))._
+
 ## Stack
 - [Axum](https://docs.rs/axum/latest/axum/)
 - [Twailwind CSS](https://tailwindcss.com/)
