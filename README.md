@@ -14,7 +14,7 @@ _Based on my [blog](https://r00ks.io) ([code here](https://github.com/Austionian
 ## Template Features
 Comes with a configured Github CI, Dependabot, server telemetry, and basic tests.
 
-## Developing
+## To Do
 > [!IMPORTANT]
 > You'll need to download and install the following to begin working:
 > - [Install and config](https://tailwindcss.com/blog/standalone-cli) the Tailwindcss cli.
@@ -22,6 +22,14 @@ Comes with a configured Github CI, Dependabot, server telemetry, and basic tests
 > `cargo install cargo-watch`
 > - Install [just](https://github.com/casey/just#packages)
 
+Make it your own:
+- [ ] Update the package name in the `Cargo.toml`
+- [ ] Update the `Dockerfile` with that same name
+- [ ] Update the site name and description in `templates/base.html`
+- [ ] Find and replace all instances in the source code of 'axum_tailwind_template' with your package name.
+- [ ] Update this `README.md`!
+
+## Developing
 Included is a bash script in a `justfile` that can be run with:
 ```shell
 just dev
