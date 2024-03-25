@@ -42,3 +42,9 @@ just build-tailwind
 just run-tailwind
 ```
 to automatically compile the tailwind as you're making changes.
+
+Also included in the `justfile` is:
+```shell
+just update
+```
+which will update dependancies and then run the tests.
