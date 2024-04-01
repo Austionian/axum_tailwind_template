@@ -25,4 +25,4 @@ COPY config config
 COPY assets assets
 COPY templates templates
 ENV APP_ENVIRONMENT production 
-ENTRYPOINT ["./axum_tailwind_template]
+ENTRYPOINT ["./axum_tailwind_template"]
