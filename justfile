@@ -7,17 +7,19 @@ default:
 alias u := update
 alias d := dev
 
+TAILWIND := "./tailwindcss -i ./src/styles/styles.css -o ./assets/styles.css"
+
 # Script to run the Tailwind binary in watch mode
 run-tailwind:
     #!/bin/bash
     echo "Starting the Tailwind binary."
-    ./tailwindcss -i ./src/styles/styles.css -o ./assets/styles.css --watch
+    {{ TAILWIND }} --watch
 
 # Script to build and minify the Tailwind binary
 build-tailwind:
     #!/bin/bash
     echo -e "\nMinifying css"
-    sh -c './tailwindcss -i ./src/styles/styles.css -o ./assets/styles.css --minify'
+    {{ TAILWIND }} --minify'
 
 # Script to run the axum server in watch mode.
 run-axum:
@@ -27,7 +29,7 @@ run-axum:
     export API_TOKEN=$API_TOKEN
 
     # Start cargo watch in the background
-    sh -c 'cargo watch -x run &'
+    sh -c 'cargo watch -x run'
 
 # Script to run the axum server and tailwind binary in watch mode so updates
 # will automatically be reflected. On exit, will minify tailwind's css.
@@ -44,9 +46,8 @@ dev:
 
     open 'http://127.0.0.1:8080'
 
-    just run-axum
+    just run-axum & just run-tailwind
 
-    just run-tailwind
     TAILWIND_PID=$!
 
     wait $TAILWIND_PID
