@@ -7,9 +7,7 @@ edition = "2021"
 
 [dependencies]
 axum = "0.8"
-config = { git = "https://github.com/mehcode/config-rs.git", rev = "e3c1d0b452639478662a44f15ef6d5b6d969bf9b", default-features = false, features = [
-  "yaml",
-] }
+config = { version = "0.15", default-features = false, features = ["yaml"] }
 hyper = { version = "1", features = ["full"] }
 lazy_static = "1"
 reqwest = { version = "0.12", features = ["json"] }
