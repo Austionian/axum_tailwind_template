@@ -1,7 +1,5 @@
 /* This file creates your base css that Tailwind will honor. */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @layer base {
   html {

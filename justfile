@@ -19,7 +19,7 @@ run-tailwind:
 build-tailwind:
     #!/bin/bash
     echo -e "\nMinifying css"
-    {{ TAILWIND }} --minify'
+    {{ TAILWIND }} --minify
 
 # Script to run the axum server in watch mode.
 run-axum:
@@ -30,6 +30,25 @@ run-axum:
 
     # Start cargo watch in the background
     sh -c 'cargo watch -x run'
+
+# Install the latest tailwind binary in your system
+download-tailwind:
+    #!/bin/bash
+    if [ "$(uname)" == "Darwin" ]; then 
+        curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-macos-arm64 
+        chmod +x tailwindcss-macos-arm64 
+        mv tailwindcss-macos-arm64 tailwindcss 
+    elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then 
+        if [ "$(uname -m)" == "x86_64" ]; then 
+            curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64 
+            chmod +x tailwindcss-linux-x64 
+            mv tailwindcss-linux-x64 tailwindcss 
+        else 
+            curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-arm64 
+            chmod +x tailwindcss-linux-arm64
+            mv tailwindcss-linux-arm64 tailwindcss
+        fi
+    fi
 
 # Script to run the axum server and tailwind binary in watch mode so updates
 # will automatically be reflected. On exit, will minify tailwind's css.
